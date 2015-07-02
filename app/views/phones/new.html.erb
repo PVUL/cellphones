@@ -1,0 +1,15 @@
+<div class="small-4">
+  <% if !@brands.nil? %>
+    <%= form_for @phone do |f| %>
+      <%= f.label :brand %>
+      <%= f.collection_select(:brand_id, @brands, :id, :name, include_blank: "Please select") %>
+      <%= f.label :year %>
+      <%= f.text_field :year %>
+      <%= f.label :battery %>
+      <%= f.text_field :battery %>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+      <%= f.submit 'Submit' %>
+    <% end %>
+  <% end %>
+</div>

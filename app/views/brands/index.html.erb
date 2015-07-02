@@ -1,0 +1,13 @@
+<%= link_to 'Phones For Sale', phones_path %><br>
+<%= link_to 'Add New Brand', new_brand_path %>
+
+<table>
+  <tr>
+    <th>Brand</th>
+  </tr>
+  <% @brands.each do |brand| %>
+    <tr>
+      <td><%= brand.name %></td>
+    </td>
+  <% end %>
+</table>

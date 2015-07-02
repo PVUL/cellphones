@@ -1,0 +1,19 @@
+<%= link_to 'Brands List', root_path %><br>
+<%= link_to 'Add New Phone', new_phone_path %>
+
+<table>
+  <tr>
+    <th>Year</th>
+    <th>Brand</th>
+    <th>Battery</th>
+    <th>Description</th>
+  </tr>
+  <% @phones.each do |phone| %>
+    <tr>
+      <td><%= phone.year %></td>
+      <td><%= phone.brand.name %></td>
+      <td><%= phone.battery %></td>
+      <td><%= phone.description %></td>
+    </tr>
+  <% end %>
+</table>
